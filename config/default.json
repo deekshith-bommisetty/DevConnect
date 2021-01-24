@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://data_pirate96:data_pirate96@devconnect.7jcwg.mongodb.net/<dbname>?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://data_pirate96:data_pirate96@devconnect.7jcwg.mongodb.net/<dbname>?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken"
 }
