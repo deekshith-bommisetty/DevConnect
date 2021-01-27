@@ -40,13 +40,15 @@ const PostSchema = new mongoose.Schema({
         type: String,
       },
       date: {
-        ype: Date,
+        type: Date,
         default: Date.now,
       },
     },
   ],
   date: {
-    ype: Date,
+    type: Date,
     default: Date.now,
   },
 });
+
+module.exports = mongoose.model('post', PostSchema);
