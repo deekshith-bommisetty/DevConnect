@@ -14,7 +14,7 @@ const Login = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (email && password == '') {
+    if (email && password === '') {
       console.log('No Login ');
     } else {
       console.log(formData);
