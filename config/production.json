@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://data_pirate96:data_pirate96@devconnect.7jcwg.mongodb.net/<dbname>?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "8be30d7339d704cc8e6a",
+  "githubSecret": "d3d107f19764debe7517f338105ac19c7babb1cd"
+}

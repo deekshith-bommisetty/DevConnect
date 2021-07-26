@@ -1,61 +1,63 @@
 import {
-  CLEAR_PROFILE,
-  GET_PROFILE,
-  PROFILE_ERROR,
-  UPDATE_PROFILE,
-  GET_PROFILES,
-  GET_REPOS,
+  GET_POSTS,
+  POST_ERROR,
+  GET_POST,
+  ADD_POST,
+  DELETE_POST,
+  UPDATE_LIKES,
   ADD_COMMENT,
   REMOVE_COMMENT,
 } from '../actions/types';
 
-const initialState = {
-  profile: null,
-  profiles: [],
-  repos: [],
+const initalState = {
+  posts: [],
+  post: null,
   loading: true,
   error: {},
 };
 
-export default function profile(state = initialState, action) {
+export default function post(state = initalState, action) {
   const { type, payload } = action;
   switch (type) {
-    case GET_PROFILE:
-    case UPDATE_PROFILE:
+    case GET_POSTS:
       return {
         ...state,
-        loading: false,
-        profile: payload,
-      };
-    case GET_PROFILES:
-      return {
-        ...state,
-        profiles: payload,
+        posts: payload,
         loading: false,
       };
-    case PROFILE_ERROR:
+    case GET_POST:
       return {
         ...state,
+        post: payload,
         loading: false,
+      };
+    case ADD_POST:
+      return {
+        ...state,
+        posts: [payload, ...state.posts],
+        loading: false,
+      };
+    case DELETE_POST:
+      return {
+        ...state,
+        posts: state.posts.filter((post) => post._id !== payload),
+        loading: false,
+      };
+
+    case POST_ERROR:
+      return {
+        ...state,
         error: payload,
-        profile: null,
-      };
-
-    case CLEAR_PROFILE: {
-      return {
-        ...state,
-        profile: null,
-        repos: [],
         loading: false,
       };
-    }
-    case GET_REPOS:
+    case UPDATE_LIKES:
       return {
         ...state,
-        repos: payload,
+        posts: state.posts.map((post) =>
+          post._id === payload.id ? { ...post, likes: payload.likes } : post
+        ),
         loading: false,
       };
-
     case ADD_COMMENT:
       return {
         ...state,
@@ -73,6 +75,7 @@ export default function profile(state = initialState, action) {
         },
         loading: false,
       };
+
     default:
       return state;
   }
