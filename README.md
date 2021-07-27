@@ -21,19 +21,19 @@ creation of build script, securing  keys and deployment to Heroku using Git
 
 ### Tech Stack
 
-Frontend frameworks & libraries 
- React
- Redux
- React-Router-DOM
- axios
- react-moment
- react-redux
+#### Frontend frameworks & libraries 
+ * React
+ * Redux
+ * React-Router-DOM
+ * axios
+ * react-moment
+ * react-redux
  
-Backend frameworks & libraries 
- Node.js / Express.js
- MongoDB
- bcryptjs
- gravatar
- mongoose
- JWT
- express validator
+#### Backend frameworks & libraries 
+ * Node.js / Express.js
+ * MongoDB
+ * bcryptjs
+ * gravatar
+ * mongoose
+ * JWT
+ * express validator
