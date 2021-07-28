@@ -9,15 +9,15 @@ This web application was developed using Node.js, React.js, Express.js and Mongo
 
 ### Development 
  
-Node.js & Express was used to develop extensive backend API resources 
-Stateless JWT authentication practices using JWT (JSON Web Tokens) was used to protect routes/ednpoints
-React.js was used for frontend development and was integrated with all API resources on the Express.js backend
-Used React Hooks, Async/Await & modern practices from ES6+
-Used Redux for application level state management on the frontend React framework. 
-Created actions and reducers for all resources used. 
-Used Postman for extensive backend API testing 
-Tested frontend application state management with the Redux Chrome extension
-creation of build script, securing  keys and deployment to Heroku using Git
+* Node.js & Express was used to develop extensive backend API resources 
+* Stateless JWT authentication practices using JWT (JSON Web Tokens) was used to protect routes/ednpoints
+* React.js was used for frontend development and was integrated with all API resources on the Express.js backend
+* Used React Hooks, Async/Await & modern practices from ES6+
+* Used Redux for application level state management on the frontend React framework. 
+* Created actions and reducers for all resources used. 
+* Used Postman for extensive backend API testing 
+* Tested frontend application state management with the Redux Chrome extension
+* creation of build script, securing  keys and deployment to Heroku using Git
 
 ### Tech Stack
 
